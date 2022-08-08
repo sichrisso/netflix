@@ -1,8 +1,8 @@
 const navbar = document.querySelector('.navbar');
 const play = document.getElementById('playbtn');
-const ju = document.querySelector('#C13');
 const detail = document.querySelector('.detailPage');
 const movie =document.querySelector('.good');
+const close = document.querySelector('.close');
 
 window.onscroll = function () {
     let top = window.scrollY;
@@ -14,11 +14,10 @@ window.onscroll = function () {
 }
 
 
-ju.addEventListener("onmouseenter", function() {
-    ju.innerHTML
-    play.style.display = "block";
-})
-
 movie.addEventListener("click", function() {
     detail.classList.add('active')
+})
+
+close.addEventListener("click", function() {
+    detail.classList.remove('active')
 })

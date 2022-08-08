@@ -1,0 +1,151 @@
+
+
+.navbar {
+    /* display:inline-block; */
+    /* text-align:center; */
+    /* align-items: center; */
+    margin-bottom:80px;
+    /* display: flex; */
+    flex-direction: row;
+    padding: 0px 10px 0px 10px;
+}
+
+.logo {
+    margin-right: 10px;
+    width: 22px;
+    height: 6px;
+}
+
+
+.navigation {
+    /* margin-right: 0px; */
+}
+
+.navigation a {
+    align-items: flex-start;
+    /* align-content: center; */
+    color: white;
+    font-size: 5px;
+}
+
+.setting img {
+    width: 4px;
+    height: 6px;
+}
+.setting {  
+    gap: 2px;
+    /* display: flex; */
+    color: white;
+}
+
+.setting p {
+    font-size: 5px;
+}
+
+.row {
+    position: fixed;
+    display: flex;
+}
+
+.buttons{
+    gap: 2px;
+    /* display: flex; */
+}
+
+#play {
+    display: flex;
+    font-size: 5px;
+    background-color: white;
+    border: none;
+    padding: 2px 5px 2px 5px;
+    gap: 2px;
+    border-radius: 2px;
+}
+
+#play img {
+    width: 5px;
+    height: 5px;
+}
+
+#more-info img {
+    width: 5px;
+    height: 5px;
+}
+
+#more-info {
+    display: flex;
+    background-color: rgb(138, 137, 137, 0.6);
+    color: white;
+    border: none;
+    padding: 2px 5px 2px 5px;
+    gap: 2px;
+    border-radius: 2px;
+    font-size: 5px;
+
+}
+
+#volume {
+    background-color:transparent;
+    border:0.5px solid white;    
+    height:10px;
+    border-radius:50%;
+    width:10px;
+    position: relative;
+}
+
+#volume img{
+    margin-left: auto;
+  margin-right: auto;
+    position: absolute;
+   text-align: center;
+    height: 8px;
+    width: 8px;  
+}
+
+/* 
+#tv_shows, #user, #trending, #hollywood, #laughs, #drama, #again, #nourish, #new, #kidsfamily {
+    gap: 1px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 100%;
+    width: 100%;
+    z-index: 1000000;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    
+} */
+#sroll_lists {
+    display: table;
+}
+
+
+#documentarie {
+    /* height: 100%; */
+    /* width: 100%; */
+   
+    overflow-x: scroll;
+    /* display: table-row; */
+    /* scrollbar-width: none; */
+}
+
+#documentarie img {
+    width: 30px;
+    height: 30px; 
+}
+
+#documentaries {
+    /* height: 100%; */
+    /* width: 100%; */
+    /* width: 30px;
+    height: 30px;  */
+    overflow: scroll;
+    display: table-row;
+    /* scrollbar-width: none; */
+}
+
+#scroll_lists img {
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+}
+

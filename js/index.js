@@ -1,9 +1,9 @@
 const navbar = document.querySelector('.navbar');
-const play = document.getElementById('playbtn');
 const detail = document.querySelector('.body2');
 const movie =document.querySelector('.good');
 const close = document.querySelector('.close');
 const maindiv = document.querySelector('.body1');
+const propagate = document.querySelector('.detailPage');
 
 window.onscroll = function () {
     let top = window.scrollY;
@@ -23,4 +23,13 @@ movie.addEventListener("click", function() {
 close.addEventListener("click", function() {
     detail.classList.remove('active');
     maindiv.classList.remove('active');
+})
+
+detail.addEventListener("click", function () {
+    detail.classList.remove('active');
+    maindiv.classList.remove('active');
+})
+
+propagate.addEventListener("click", function(e) {
+    e.stopPropagation()
 })

@@ -6,7 +6,6 @@
 .body1 {
     background-image: linear-gradient(to bottom, transparent 40%,  rgb(26, 25, 25)88%), url(../images/BreakingBad.webp);
     background-size: cover;
-    backdrop-filter: blur(5px, 80%);
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
@@ -14,44 +13,47 @@
 }
 
 .navbar {
-    position: relative;
+    gap: 500px;
     width: 100%;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     background-color: transparent;
     transition: 0.3s all;
-    padding: 4.5px 12px 4.5px 12px;
+    padding-top: 25px;
+    padding-left: 60px;
+    padding-bottom: 20px;
+    padding-right: 60px;
     align-items: center;
     display: flex;
     position: fixed;
 }
 
-.navbar.active {
+ .navbar.active {
     z-index: 1000;
     background-color: rgb(16, 15, 15);
 }
 
 .navbar img {
-    width: 5px;
-    height: 6px;
+    width: 31px;
+    height: 27px;
 }
 
 #logo {
     cursor: pointer;
-    margin-right: 10px;
-    width: 22px;
-    height: 6px;
+    margin-right: 50px;
+    width: 105px;
+    height: 31px;
 }
 
 #profile {
-    width: 7px;
-    height: 7px;
-    border-radius: 1px;
+    width: 38px;
+    height: 37px;
+    border-radius: 5px;
 }
 
 #dropdown {
     transform: rotate(90deg);
-    height: 1x;
-    width: 2px;
+    height: 8x;
+    width: 10px;
 }
 
 #dropdown:hover {
@@ -63,18 +65,20 @@
     display: flex;
 }
 .navigation a{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
     cursor: pointer;
     text-align: center;
-    margin-right: 4px;
-    font-size: 4px;
-    font-weight: 500;
-    color: rgb(230, 230, 230,0.7);
+    align-self: center;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(233, 231, 231);
 }
 
 .navigation a:hover {
-    transition: 0.5s;
-    color: white;
+    transition: 0.73s;
+    color: rgb(170, 161, 161, 0.9);
 }
 
 .navigation a.active {
@@ -82,104 +86,82 @@
     font-weight: bold;
 }
 
+.navigation .current {
+    color: white;
+    font-weight: 600;
+}
+
 .setting {
     cursor: pointer;
-    position: absolute;
-    right: 37px;
-    gap: 3px;
+    gap: 10px;
     align-items: center;
     display: flex;
 }
 
 .setting p{
     text-align: end;
-    font-size: 3px;
+    font-size: 15px;
     color: white;
+}
+
+.row {
+    padding-left: 60px;
+    position: absolute;
+    top: 150px;
 }
 
 .series {
-    padding-left: 3.5px;
     display: flex;
+    gap: 5px;
 }
 
 .series img {
-    width: 5px;
-    height: 5px;
-}
-
-.series p{
-    align-self: center;
-    font-size: 3px;
-    color: white;
-}
-.row {
-    padding: 6.5px 12px 0px 8.5px;
-    position: absolute;
-    top: 30px;
-}
-
-#title {
-    width: 120px;
-}
-#title img {
-    width: 95px;
+    width: 35px;
     height: 35px;
 }
 
-#title p {
+.series p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-self: center;
+    font-weight: 600;
+    letter-spacing: 5px;
+    font-size: 20px;
+    color: rgb(207, 206, 206);
+}
 
-    padding: 5px 12px 0px 3.5px;
+#title {
+    width: 530px;
+}
+#title img {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 550px;
+    height: 220px;
+}
+
+#title p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
-    font-size: 4px;
+    font-size: 18px;
 }
 
 #rows {
+    padding-left: 60px;
     position: relative;
-    top: 100px;
+    top: 530px;
     display: flex;
-    margin-left: 12px;
     justify-content: space-between;
 }
 
-#volumeage {
-    align-self: center;
-    display: flex;
-    gap: 3px;
-}
-
-#volumeage img {
-    padding: 1px;
-    border-radius: 50%;
-    border: 0.5px solid white;
-    align-self: center;
-    width: 5px;
-    height: 5px;
-    background-color: white;
-    opacity: 0.6;
-}
-
-#volumeage p {
-    align-self: center;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-left: 2px;
-    padding-right: 11px;
-    border-left: 0.5px solid white;
-    background-color: rgb(62, 62, 62, 0.5);
-    color: white;
-    font-size: 4px;
-}
-
 .buttons{
-    margin-top: 2px;
-    gap: 2px;
+    gap: 20px;
     display: flex;
 }
 
 .buttons img {
     align-self: center;
-    width: 5px;
-    height: 5px;
+    width: 25px;
+    height: 25px;
 }
 
 #play {
@@ -187,36 +169,36 @@
     display: flex;   
     background-color: white;
     border: none;
-    padding: 2px 5px 2px 5px;
-    gap: 2px;
-    border-radius: 1px;
+    padding: 11px 24px 11px 24px;
+    gap: 10px;
+    border-radius: 5px;
 }
+
 #play:hover{
+    transition: 0.5s;
     background-color: rgb(231, 229, 229,0.9);
 }
 
 #play p {
-    font-weight: 700;
-    font-size: 3.5px;
+    font-weight: 600;
+    font-size: 20px;
     align-self: center;
 }
-
 
 #more-info {
     cursor: pointer;
     display: flex;
-    background-color: rgb(99, 98, 98, 0.9);
+    background-color: rgba(76, 72, 72, 0.6);
     color: white;
     border: none;
-    padding: 2px 5px 2px 5px;
-    gap: 2px;
-    border-radius: 1px;
-    font-size: 5px;
+    padding: 11px 24px 11px 24px;
+    gap: 10px;
+    border-radius: 5px;
 }
 
 #more-info p {
-    font-weight: 700;
-    font-size: 3.5px;
+    font-weight: 600;
+    font-size: 20px;
     align-self: center;
 }
 
@@ -224,21 +206,47 @@
     background-color: rgb(99, 98, 98, 0.6);
 }
 
+#volumeage {
+    align-self: center;
+    display: flex;
+    gap: 15px;
+}
+
+#volumeage img {
+    padding: 6px;
+    border-radius: 50%;
+    border: 3px solid white;
+    align-self: center;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    opacity: 0.6;
+}
+
+#volumeage p {
+    align-self: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    padding-right: 60px;
+    border-left: 3.5px solid rgb(199, 199, 199);
+    background-color: rgb(62, 62, 62, 0.5);
+    color: white;
+    font-size: 18px;
+}
+
 .scroll_lists {
     background:linear-gradient(to top, rgb(1, 1, 1),  rgb(26, 25, 25) 90%);
     position:relative;
-    top: 130px;
+    top: 680px;
 }
+
 .scroll_lists div {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;
     display: flex;
     flex-direction: row;
-    margin-right: 0px;
-    margin-left: 12px;
-    margin-bottom: 12px;
+    padding-left: 60px;
+    margin-bottom: 40px;
     overflow-x: scroll;
-    scrollbar-width: 10px;
 }
 
 .scroll_lists div::-webkit-scrollbar {
@@ -248,30 +256,29 @@
 .scroll_lists div img {
     cursor: pointer;
     object-fit: contain;
-    width: 60px;
-    min-height: 35px;
-    margin-left: 1px;
-    border-radius: 1px;
+    width: 280px;
+    min-height: 18px;
+    margin-left: 6px;
+    border-radius: 10px;
 }
 
 .scroll_lists div img:hover {
-    max-height: 70px;
     transform:scale(1.08);
     transition: 0.3s;
 }
 
 .scroll_lists p {
     color: rgb(224, 224, 224);
-    font-size: 4.5px;
+    font-size: 22px;
     font-weight: 700;
-    margin-bottom: 3px;
-    margin-left: 12px;
+    /* margin-bottom: 30px; */
+    padding-left: 60px;
     font-family: Arial, Helvetica, sans-serif;
-}
+} 
 
 
 /* Detail Page Css */
-
+/* 
 .body2 {
     position: relative;
     margin-left: 285px;
@@ -552,9 +559,8 @@
     background-color:rgba(80, 77, 77, 0.4);
 }
 
-.Collections > div:hover {
+.Collections div:hover {
     cursor: pointer;
-    display:block;
 }
 
 .Collections img {
@@ -586,9 +592,11 @@
     top: 50px;
 }
 
-/* #playbtn:hover {
-    
-} */
+.img:hover ~ #playbtn {
+    display: block;
+}
+
+
 
 .desc {
     padding: 15px;
@@ -625,4 +633,17 @@
     color: rgb(51, 193, 51);
     font-size: 20px;
     font-weight: bold;
+} */
+
+.detailPage {
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: 0;
+}
+
+.detailPage.active {
+    display: block;
 }

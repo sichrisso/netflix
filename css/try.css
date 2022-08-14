@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+}
+
+
+.searchs {
+
+}
+
+.searchs.active {
+    border: 2px solid white;
+}

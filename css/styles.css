@@ -1,705 +1,799 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .body1 {
-    background-image: linear-gradient(to bottom, transparent 40%,  rgb(26, 25, 25)90%), url(../images/BreakingBad.webp);
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    position: relative;
-    background-image: linear-gradient(1to right,rgba(0,0,0,.7) 10%,transparent);
+  background-color: rgb(26, 25, 25);
+  background-image: linear-gradient(
+      to bottom,
+      transparent 40%,
+      rgb(26, 25, 25) 100%
+    ),
+    url(../images/BreakingBad.webp);
+  background-size: cover;
+  width: 100%;
+  height: 880px;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .body1.active {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .navbar {
-    background-image: linear-gradient(to bottom,rgba(0,0,0,.7) 10%,transparent);
-    gap: 500px;
-    width: 100%;
-    background-color: transparent;
-    transition: 0.3s all;
-    padding-top: 25px;
-    padding-left: 60px;
-    padding-bottom: 20px;
-    padding-right: 60px;
-    align-items: center;
-    display: flex;
-    position: fixed;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 10%,
+    transparent
+  );
+  gap: 500px;
+  width: 100%;
+  background-color: transparent;
+  transition: 0.3s all;
+  padding-top: 25px;
+  padding-left: 60px;
+  padding-bottom: 20px;
+  padding-right: 60px;
+  align-items: center;
+  display: flex;
+  position: fixed;
 }
 
- .navbar.active {
-    z-index: 1000;
-    background-color: rgb(16, 15, 15);
+.navbar.active {
+  z-index: 1000;
+  background-color: rgb(16, 15, 15);
 }
 
 .navbar img {
-    width: 31px;
-    height: 27px;
+  width: 31px;
+  height: 27px;
 }
 
 #logo {
-    cursor: pointer;
-    margin-right: 50px;
-    width: 105px;
-    height: 31px;
+  cursor: pointer;
+  margin-right: 50px;
+  width: 105px;
+  height: 31px;
 }
 
 #profile {
-    width: 38px;
-    height: 37px;
-    border-radius: 5px;
+  width: 38px;
+  height: 37px;
+  border-radius: 5px;
 }
 
 #dropdown {
-    transform: rotate(90deg);
-    height: 8x;
-    width: 10px;
+  transform: rotate(90deg);
+  height: 8x;
+  width: 10px;
 }
 
 #dropdown:hover {
-    transform: rotate(270deg);
-    transition: 0.5s;
+  transform: rotate(270deg);
+  transition: 0.5s;
 }
 
 .navigation {
-    display: flex;
+  display: flex;
 }
-.navigation a{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-decoration: none;
-    cursor: pointer;
-    text-align: center;
-    align-self: center;
-    margin-right: 20px;
-    font-size: 18px;
-    font-weight: 300;
-    color: rgb(233, 231, 231);
+.navigation a {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  align-self: center;
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  color: rgb(233, 231, 231);
 }
 
 .navigation a:hover {
-    transition: 0.73s;
-    color: rgb(170, 161, 161, 0.9);
+  transition: 0.73s;
+  color: rgb(170, 161, 161, 0.9);
 }
 
 .navigation a.active {
-    color: white;
-    font-weight: bold;
+  color: white;
+  font-weight: bold;
 }
 
 .navigation .current {
-    color: white;
-    font-weight: 600;
+  color: white;
+  font-weight: 600;
 }
 
 .setting {
-    cursor: pointer;
-    gap: 10px;
-    align-items: center;
-    display: flex;
+  cursor: pointer;
+  gap: 10px;
+  align-items: center;
+  display: flex;
 }
 
-.setting p{
-    text-align: end;
-    font-size: 15px;
-    color: white;
+.setting.active{
+  margin-left: 41px;
+}
+
+.setting p {
+  text-align: end;
+  font-size: 15px;
+  color: white;
+}
+
+.search {
+  z-index: 950;
+}
+.search.active {
+  background-color:  #212121;
+  transition: all 0.5s ease;
+  z-index: 900;
+  border: 2px solid white;
+  padding-right: 265px;
+  padding-left: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  position: absolute;
+  left: 960px;
+}
+
+.searchField {
+  background-color: transparent;
+  width: 260px;
+  height: 25px;
+  outline: none;
+  border: none;
+  z-index: 950;
+  color: white;
+}
+
+.searchField::placeholder {
+  font-size: 15px;
+}
+
+.searchText {
+  display: flex;
+  position: absolute;
+  left: 1000px;
+  opacity: 0;
+}
+
+.searchText p {
+  font-weight:lighter;
+  margin-left: 5px;
+  font-size: 15px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  opacity: 0.6;
+}
+
+.searchText.active {
+  opacity: 1;
 }
 
 .row {
-    padding-left: 60px;
-    position: absolute;
-    top: 150px;
+  padding-left: 60px;
+  position: absolute;
+  top: 150px;
 }
 
 .series {
-    display: flex;
-    gap: 5px;
+  display: flex;
+  gap: 5px;
 }
 
 .series img {
-    width: 35px;
-    height: 35px;
+  width: 35px;
+  height: 35px;
 }
 
-.series p{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    align-self: center;
-    font-weight: 600;
-    letter-spacing: 5px;
-    font-size: 20px;
-    color: rgb(207, 206, 206);
+.series p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  align-self: center;
+  font-weight: 600;
+  letter-spacing: 5px;
+  font-size: 20px;
+  color: rgb(207, 206, 206);
 }
 
 #title {
-    width: 530px;
+  width: 530px;
 }
 #title img {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    width: 550px;
-    height: 220px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 550px;
+  height: 220px;
 }
 
 #title p {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: white;
-    font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: white;
+  font-size: 18px;
 }
 
 #rows {
-    padding-left: 60px;
-    position: relative;
-    top: 530px;
-    display: flex;
-    justify-content: space-between;
+  padding-left: 60px;
+  position: relative;
+  top: 530px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.buttons{
-    gap: 20px;
-    display: flex;
+.buttons {
+  gap: 20px;
+  display: flex;
 }
 
 .buttons img {
-    align-self: center;
-    width: 25px;
-    height: 25px;
+  align-self: center;
+  width: 25px;
+  height: 25px;
 }
 
 #play {
-    cursor: pointer;
-    display: flex;   
-    background-color: white;
-    border: none;
-    padding: 11px 24px 11px 24px;
-    gap: 10px;
-    border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  background-color: white;
+  border: none;
+  padding: 11px 24px 11px 24px;
+  gap: 10px;
+  border-radius: 5px;
 }
 
-#play:hover{
-    transition: 0.5s;
-    background-color: rgb(231, 229, 229,0.9);
+#play:hover {
+  transition: 0.5s;
+  background-color: rgb(231, 229, 229, 0.9);
 }
 
 #play p {
-    font-weight: 600;
-    font-size: 20px;
-    align-self: center;
+  font-weight: 600;
+  font-size: 20px;
+  align-self: center;
 }
 
 #more-info {
-    cursor: pointer;
-    display: flex;
-    background-color: rgba(76, 72, 72, 0.6);
-    color: white;
-    border: none;
-    padding: 11px 24px 11px 24px;
-    gap: 10px;
-    border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  background-color: rgba(76, 72, 72, 0.6);
+  color: white;
+  border: none;
+  padding: 11px 24px 11px 24px;
+  gap: 10px;
+  border-radius: 5px;
 }
 
 #more-info p {
-    font-weight: 600;
-    font-size: 20px;
-    align-self: center;
+  font-weight: 600;
+  font-size: 20px;
+  align-self: center;
 }
 
 #more-info:hover {
-    background-color: rgb(99, 98, 98, 0.6);
+  background-color: rgb(99, 98, 98, 0.6);
 }
 
 #volumeage {
-    align-self: center;
-    display: flex;
-    gap: 15px;
+  align-self: center;
+  display: flex;
+  gap: 15px;
 }
 
 #volumeage img {
-    padding: 6px;
-    border-radius: 50%;
-    border: 3px solid white;
-    align-self: center;
-    width: 25px;
-    height: 25px;
-    background-color: white;
-    opacity: 0.6;
+  padding: 6px;
+  border-radius: 50%;
+  border: 3px solid white;
+  align-self: center;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  opacity: 0.6;
 }
 
 #volumeage p {
-    align-self: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 8px;
-    padding-right: 60px;
-    border-left: 3.5px solid rgb(199, 199, 199);
-    background-color: rgb(62, 62, 62, 0.5);
-    color: white;
-    font-size: 18px;
+  align-self: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 8px;
+  padding-right: 45px;
+  border-left: 3.5px solid rgb(199, 199, 199);
+  background-color: rgb(62, 62, 62, 0.5);
+  color: white;
+  font-size: 18px;
 }
 
-.scroll_lists {
-    /* background-color: black; */
-    background:linear-gradient(to top, rgb(1, 1, 1),  rgb(26, 25, 25) 90%);
-    position:relative;
-    top: 680px;
+.movie_lists {
+  padding-left: 60px;
+  position: relative;
+  top: 650px;
 }
 
-.scroll_lists div {
-    display: flex;
-    flex-direction: row;
-    padding-left: 60px;
-    margin-bottom: 40px;
-    overflow-x: scroll;
+.movie p {
+  color: rgb(224, 224, 224);
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.scroll_lists div::-webkit-scrollbar {
-    display: none;
+.ImageContainer {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 280px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
-.scroll_lists div img {
-    cursor: pointer;
-    object-fit: contain;
-    width: 280px;
-    min-height: 18px;
-    margin-left: 6px;
-    border-radius: 10px;
+.ImageContainer::-webkit-scrollbar {
+  display: none;
 }
 
-.scroll_lists div img:hover {
-    z-index: 1000;
-    width: 300px;
-    min-height: 28px;
-    /* -webkit-transform: scale(1.08);
-    -ms-transform: scale(1.08);
-    transform: scale(1.08); */
-    transform:scale(1.08);
-    /* transition: 0.3s; */
-    transition: color 0.3s ease;
+.ImageContainer img {
+  /* width: 600000px; */
+  height: 250px;
+  z-index: 800;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 10px;
+  position: relative;
 }
 
-.scroll_lists p {
-    color: rgb(224, 224, 224);
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    padding-left: 60px;
-    font-family: Arial, Helvetica, sans-serif;
-} 
+.ImageContainer img:hover { 
+  transform-origin: center;
+  z-index: 850;
+  /* overflow-y: hidden; */
+  height: 280px;
+  border-radius: 0%;
+  transform: scale(1.08); 
+}
 
-#divide {
-    position: absolute;
-    top: 680px;
-    color: rgb(224, 224, 224);
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    padding-left: 60px;
-    font-family: Arial, Helvetica, sans-serif;
+.movie button img {
+  width: 40px;
+  height: 40px;
+}
+
+.preBtn {
+  z-index: 900;
+  opacity: 0;
+  outline: none;
+  border: none;
+  background: transparent;
+  object-fit: contain;
+  margin-top: 90px;
+  position: absolute;
+  left: 2px;
+  transform: rotate(90deg);
+  align-self: center;
+}
+
+.nxtBtn {
+  z-index: 900;
+  opacity: 0;
+  outline: none;
+  border: none;
+  background: transparent;
+  object-fit: contain;
+  margin-top: 90px;
+  position: absolute;
+  right: 2px;
+  transform: rotate(-90deg);
+  align-self: center;
+}
+
+.nxtBtn:hover,
+.preBtn:hover {
+  background-color: rgb(43, 43, 43, 0.5);
+  z-index: 1000;
+  opacity: 1;
 }
 
 /* Detail Page Css */
 
 .body2 {
-    display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(90, 90, 90, 0.5);
-    z-index: 9999;
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(90, 90, 90, 0.5);
+  z-index: 9999;
 }
-.detailPage { 
-    height: 100%; 
-    position: fixed;
-    top: 50px;
-    left: 50px;
-    margin-left: 285px;
-    margin-right: 284px;
-    height: 100%;
-    overflow-y: scroll;
+.detailPage {
+  height: 100%;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  margin-left: 285px;
+  margin-right: 284px;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 .detailPage::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .body2.active {
-    display: block;
+  display: block;
 }
 
 #detail_img {
-    background-image: linear-gradient(to bottom, transparent 80%,  rgb(34, 34, 34)100%), url(../images/detail.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    display: block;
-    width: 950px;
-    height: 580px;
-    margin-top: 20px;
-    border-radius: 15px 15px 0px 0px;
-    position: relative;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 80%,
+      rgb(34, 34, 34) 100%
+    ),
+    url(../images/detail.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: block;
+  width: 950px;
+  height: 580px;
+  margin-top: 20px;
+  border-radius: 15px 15px 0px 0px;
+  position: relative;
 }
 
 #detail_title {
-    cursor: pointer;
-    width: 330px;
-    height: 150px;
-    position: absolute;
-    left: 50px;
-    top: 250px;
+  cursor: pointer;
+  width: 330px;
+  height: 150px;
+  position: absolute;
+  left: 50px;
+  top: 250px;
 }
 
 .close {
-    cursor: pointer;
-    position: absolute;
-    left: 895px;
-    top: 30px;
-    background-color: rgba(212, 211, 211, 0.2);
-    padding: 8px;
-    border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  left: 895px;
+  top: 30px;
+  background-color: rgba(212, 211, 211, 0.2);
+  padding: 8px;
+  border-radius: 50%;
 }
 
 .details p {
-    cursor: pointer;
-    width: 400px;
-    color: white;
-    position: absolute;
-    left: 540px;
-    top: 370px;
-    font-size: 25px;
-    letter-spacing: 2px;
+  cursor: pointer;
+  width: 400px;
+  color: white;
+  position: absolute;
+  left: 540px;
+  top: 370px;
+  font-size: 25px;
+  letter-spacing: 2px;
 }
 
 .button {
-    position: absolute;
-    left: 60px;
-    top: 440px;
-    display: flex;
-    gap: 10px;
+  position: absolute;
+  left: 60px;
+  top: 440px;
+  display: flex;
+  gap: 10px;
 }
 
 .button img {
-    cursor: pointer;
-    align-self: center;
-    width: 25px;
-    height: 25px;
+  cursor: pointer;
+  align-self: center;
+  width: 25px;
+  height: 25px;
 }
 
 #play2 {
-    cursor: pointer;
-    display: flex;
-    background-color: white;
-    border: none;
-    padding: 7px 25px 7px 25px;
-    gap: 10px;
-    border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  background-color: white;
+  border: none;
+  padding: 7px 25px 7px 25px;
+  gap: 10px;
+  border-radius: 3px;
 }
 
 #play2 p {
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 20px;
-    align-self: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+  align-self: center;
 }
-#play2:hover{
-    background-color: rgb(231, 229, 229,0.7);
+#play2:hover {
+  background-color: rgb(231, 229, 229, 0.7);
 }
 
 #addlike img {
-    align-self: center;
-    background-color: rgb(26, 25, 25, 0.4);
-    margin-right: 5px;
-    padding: 7px;
-    border-radius: 50%;
-    border: 1px solid white;
+  align-self: center;
+  background-color: rgb(26, 25, 25, 0.4);
+  margin-right: 5px;
+  padding: 7px;
+  border-radius: 50%;
+  border: 1px solid white;
 }
 
-.episodes{
-    background:linear-gradient(to top, rgb(1, 1, 1),  rgb(34, 34, 34) 10%);
+.episodes {
+  background: linear-gradient(to top, rgb(1, 1, 1), rgb(34, 34, 34) 10%);
 }
 
 .episodes hr {
-    color: rgb(171, 171, 171);
-    margin-left: 55px;
-    margin-right: 55px;
+  color: rgb(171, 171, 171);
+  margin-left: 55px;
+  margin-right: 55px;
 }
 
 .info {
-    padding: 55px;
-    display: flex;
-    color: white;
+  padding: 55px;
+  display: flex;
+  color: white;
 }
 
 .description {
-    flex: 2;
+  flex: 2;
 }
 
 .cast {
-    flex: 1;
+  flex: 1;
 }
 
 .match {
-    gap: 15px;
-    display: flex;
-    margin-bottom: 30px;
-    
+  gap: 15px;
+  display: flex;
+  margin-bottom: 30px;
 }
 
 .match p {
-    align-self: center;
-    font-size: 20px;
-    color: white;
+  align-self: center;
+  font-size: 20px;
+  color: white;
 }
 
 .match p:first-of-type {
-    opacity: 1;
-    z-index: 100;
-    color: rgb(38, 240, 38);
-    font-weight: bold;
+  opacity: 1;
+  z-index: 100;
+  color: rgb(38, 240, 38);
+  font-weight: bold;
 }
 
 .match img {
-    align-self: center;
-    width: 30px;
-    height: 25px;
+  align-self: center;
+  width: 30px;
+  height: 25px;
 }
 
 #hd {
-    font-size: 12px;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0px 5.5px 0px 5.5px;
-    border: 1px solid;
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0px 5.5px 0px 5.5px;
+  border: 1px solid;
 }
 
 #PG {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0px 5px 0px 5px;
-    border: 1px solid;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0px 5px 0px 5px;
+  border: 1px solid;
 }
 
 .description > p {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 300;
-    font-size: 17px;
-    width: 460px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  width: 460px;
 }
 
 .cast p {
-    font-size: 17px;
-    display: inline;
+  font-size: 17px;
+  display: inline;
 }
 .cast p:nth-of-type(odd) {
-    font-weight: bolder;
-    font-size: 18px;
-    color: rgb(99, 98, 98);
+  font-weight: bolder;
+  font-size: 18px;
+  color: rgb(99, 98, 98);
 }
 
 .header {
-    padding-left: 55px;
-    padding-right: 55px;
-    padding-bottom: 10px;
-    justify-content: space-between;
-    display: flex;
-    color: white;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  display: flex;
+  color: white;
 }
 
 .header > p {
-    align-self: center;
-    font-size: 30px;
-    font-weight: bold;
+  align-self: center;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-
 .header button {
-    background-color: rgba(53, 53, 53, 0.8);
-    align-self: center;
-    justify-content: space-between;
-    font-size: 20px;
-    font-weight: bold;
-    width: 180px;
-    padding: 10px 12px 10px 12px;
-    display: flex;
-    border: 1px solid;
-    border-radius: 6px;
-    color: white;
+  background-color: rgba(53, 53, 53, 0.8);
+  align-self: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  width: 180px;
+  padding: 10px 12px 10px 12px;
+  display: flex;
+  border: 1px solid;
+  border-radius: 6px;
+  color: white;
 }
 
 .season img {
-    align-self: center;
-    transform: rotate(90deg);
-    height: 12px;
-    width: 30px;
+  align-self: center;
+  transform: rotate(90deg);
+  height: 12px;
+  width: 30px;
 }
 
 .episode_list {
-    margin: 30px 90px 30px 90px;
-    display: flex;
-    gap: 10px;
+  margin: 30px 90px 30px 90px;
+  display: flex;
+  gap: 10px;
 }
 
 .episode_list img {
-    width: 150px;
-    height: 80px;
+  width: 150px;
+  height: 80px;
 }
 
 #episode_title {
-    justify-content: space-between;
-    display: flex;
-    margin-top: 5px;
-    margin-bottom: 17px;
+  justify-content: space-between;
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 17px;
 }
 
 .episode_list > p {
-    font-size: 20px;
-    align-self: center;
-    color: white;
+  font-size: 20px;
+  align-self: center;
+  color: white;
 }
 
 .episode_list p {
-    color: white;
+  color: white;
 }
 
 .icon {
-    margin-top: 50px;
-    padding-left: 60px;
-    font-size: 27px;
-    font-weight: bold;
-    color: white;
-    gap: 10px;
-    font-family: sans-serif;
-    display: flex;
+  margin-top: 50px;
+  padding-left: 60px;
+  font-size: 27px;
+  font-weight: bold;
+  color: white;
+  gap: 10px;
+  font-family: sans-serif;
+  display: flex;
 }
 
 .more {
-    margin-top: 50px;
-    padding-left: 60px;
-    font-size: 27px;
-    font-weight: bold;
-    color: white;
-    gap: 10px;
-    font-family: sans-serif;
-    display: flex;
+  margin-top: 50px;
+  padding-left: 60px;
+  font-size: 27px;
+  font-weight: bold;
+  color: white;
+  gap: 10px;
+  font-family: sans-serif;
+  display: flex;
 }
 
 .Collections {
-    padding-left: 60px;
-    padding-right: 60px;
-    color: white;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 20px;
-    display: grid;
-    grid-template-columns: auto auto auto;
+  padding-left: 60px;
+  padding-right: 60px;
+  color: white;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 
 .Collections > div {
-    padding-bottom: 10px;
-    border-radius: 3px;
-    position: relative;
-    background-color:rgba(80, 77, 77, 0.4);
+  padding-bottom: 10px;
+  border-radius: 3px;
+  position: relative;
+  background-color: rgba(80, 77, 77, 0.4);
 }
 
 .Collections div:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .Collections img {
-    position: relative;
-    width: 100%;
-    height: 150px;
+  position: relative;
+  width: 100%;
+  height: 150px;
 }
 
 #seasonNo {
-    z-index: 100;
-    font-size: 20px;
-    font-weight: 500;
-    position: absolute;
-    right: 0;
-    top: 5px;
-    color: white;
+  z-index: 100;
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  color: white;
 }
 
 #playbtn {
-    width: 30px;
-    height: 30px;
-    background-color: rgb(75, 69, 69, 0.6);
-    padding: 10px;
-    border-radius: 50%;
-    border: 1px solid white;
-    position: absolute;
-    display: none;
-    left: 110px;
-    top: 50px;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(75, 69, 69, 0.6);
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: absolute;
+  display: none;
+  left: 110px;
+  top: 50px;
 }
 
 .img:hover ~ #playbtn {
-    display: block;
+  display: block;
 }
 
 #playbtn:hover {
-    display: block;
+  display: block;
 }
 
-
-
 .desc {
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .desc img {
-    width: 22px;
-    height: 22px;
-    background-color: transparent;
-    padding: 8px;
-    border-radius: 50%;
-    border: 1px solid white;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  padding: 8px;
+  border-radius: 50%;
+  border: 1px solid white;
 }
 
 #horizontal {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 10px;
-    gap: 10px;
-    display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  gap: 10px;
+  display: flex;
 }
 
-.Collections > div > p{
-    color: rgb(190, 184, 184);
-    font-size: 17px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-left: 15px;
-    padding-right: 15px;
+.Collections > div > p {
+  color: rgb(190, 184, 184);
+  font-size: 17px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 #green {
-    color: rgb(51, 193, 51);
-    font-size: 20px;
-    font-weight: bold;
+  color: rgb(51, 193, 51);
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .about {
-    margin-bottom: 50px;
-    padding-left:60px;
-    color: white;
+  margin-bottom: 50px;
+  padding-left: 60px;
+  color: white;
 }
 
-.about p{
-    font-size: 20px;
+.about p {
+  font-size: 20px;
+  display: inline;
 }
 
 .about h1 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.recommend {
-    display: flex;
+.about p:nth-of-type(odd) {
+  font-weight: bolder;
+  font-size: 18px;
+  color: rgb(99, 98, 98);
 }

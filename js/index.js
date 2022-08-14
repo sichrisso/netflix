@@ -46,19 +46,16 @@ propagate.addEventListener("click", function (e) {
   e.stopPropagation();
 });
 
-function righty() {
-    console.log("rygfju")
-    let index = 0;
-    for (const nxtButton of nxtButtons) {
-      const MovieScroll = MovieScrolls[index];
-    //   function righty() {
-        // const MovieScrolls = [...document.getElementsByClassName("ImageContainer")];
-        // MovieScroll.scrollLeft += 700;
-    //   }
-      index++;
-    }
-    
+let index = 0;
+for (const nxtButton of nxtButtons) {
+  const MovieScroll = MovieScrolls[index];
+  function righty() {
+    console.log("first")
+    MovieScroll.scrollLeft += 700;
+  };
+  index++;
 }
+
 //   nxtButton.addEventListener("click", function () {
 //     MovieScroll.scrollLeft += 700;
 //   });

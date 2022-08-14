@@ -4,14 +4,16 @@
 }
 
 .body1 {
+  z-index: 850;
   background-color: rgb(26, 25, 25);
-  background-image: linear-gradient(
+  background-size: cover;
+  background-position: 50% 50%;
+  /* background-image: linear-gradient(
       to bottom,
-      transparent 40%,
+      transparent 0%,
       rgb(26, 25, 25) 100%
     ),
-    url(../images/BreakingBad.webp);
-  background-size: cover;
+    url(../images/BreakingBad.webp); */
   width: 100%;
   height: 880px;
   background-repeat: no-repeat;
@@ -32,7 +34,7 @@
   width: 100%;
   background-color: transparent;
   transition: 0.3s all;
-  padding-top: 25px;
+  padding-top: 20px;
   padding-left: 60px;
   padding-bottom: 20px;
   padding-right: 60px;
@@ -79,20 +81,21 @@
   display: flex;
 }
 .navigation a {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
   cursor: pointer;
   text-align: center;
   align-self: center;
   margin-right: 20px;
-  font-size: 18px;
-  font-weight: 300;
-  color: rgb(233, 231, 231);
+  font-size: 17px;
+  opacity: 0.9;
+  font-weight: 400;
+  color: white;
 }
 
 .navigation a:hover {
   transition: 0.73s;
-  color: rgb(170, 161, 161, 0.9);
+  color: rgba(214, 213, 213, 0.8);
 }
 
 .navigation a.active {
@@ -101,8 +104,9 @@
 }
 
 .navigation .current {
+  opacity: 1;
   color: white;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .setting {
@@ -112,7 +116,7 @@
   display: flex;
 }
 
-.setting.active{
+.setting.active {
   margin-left: 41px;
 }
 
@@ -126,14 +130,14 @@
   z-index: 950;
 }
 .search.active {
-  background-color:  #212121;
-  transition: all 0.5s ease;
+  background-color: rgba(11, 10, 10, 0.7);
+  transition: all 0.3s ease;
   z-index: 900;
   border: 2px solid white;
   padding-right: 265px;
   padding-left: 2px;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 1px;
+  padding-bottom: 1px;
   position: absolute;
   left: 960px;
 }
@@ -150,6 +154,7 @@
 
 .searchField::placeholder {
   font-size: 15px;
+  color: rgba(214, 213, 213, 0.8);
 }
 
 .searchText {
@@ -160,10 +165,10 @@
 }
 
 .searchText p {
-  font-weight:lighter;
+  font-weight: lighter;
   margin-left: 5px;
   font-size: 15px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   opacity: 0.6;
 }
 
@@ -174,7 +179,7 @@
 .row {
   padding-left: 60px;
   position: absolute;
-  top: 150px;
+  top: 190px;
 }
 
 .series {
@@ -191,34 +196,40 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   align-self: center;
-  font-weight: 600;
+  font-weight: bolder;
   letter-spacing: 5px;
   font-size: 20px;
   color: rgb(207, 206, 206);
 }
 
 #title {
-  width: 530px;
+  width: 600px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-#title img {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  width: 550px;
-  height: 220px;
+
+#title h1 {
+  z-index: 999;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  letter-spacing: 5px;
+  font-size: 70px;
+  color: white;
 }
 
 #title p {
+  z-index: 999;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: white;
-  font-size: 18px;
+  font-size: 17px;
+  text-overflow: ellipsis;
 }
 
-#rows {
-  padding-left: 60px;
-  position: relative;
-  top: 530px;
+.row2 {
   display: flex;
-  justify-content: space-between;
+  gap: 999px;
 }
 
 .buttons {
@@ -304,6 +315,7 @@
 }
 
 .movie_lists {
+  padding-top: 20px;
   padding-left: 60px;
   position: relative;
   top: 650px;
@@ -317,12 +329,12 @@
 }
 
 .ImageContainer {
+  height: 280px;
   overflow-x: scroll;
   scroll-behavior: smooth;
   display: flex;
   gap: 10px;
   width: 100%;
-  height: 280px;
   margin-top: 15px;
   margin-bottom: 15px;
 }
@@ -332,7 +344,6 @@
 }
 
 .ImageContainer img {
-  /* width: 600000px; */
   height: 250px;
   z-index: 800;
   object-fit: cover;
@@ -341,28 +352,23 @@
   position: relative;
 }
 
-.ImageContainer img:hover { 
+.ImageContainer img:hover {
   transform-origin: center;
   z-index: 850;
-  /* overflow-y: hidden; */
   height: 280px;
   border-radius: 0%;
-  transform: scale(1.08); 
-}
-
-.movie button img {
-  width: 40px;
-  height: 40px;
+  transform: scale(1.08);
 }
 
 .preBtn {
+  height: 70px;
   z-index: 900;
   opacity: 0;
   outline: none;
   border: none;
   background: transparent;
   object-fit: contain;
-  margin-top: 90px;
+  margin-top: 97.5px;
   position: absolute;
   left: 2px;
   transform: rotate(90deg);
@@ -370,13 +376,14 @@
 }
 
 .nxtBtn {
+  height: 70px;
   z-index: 900;
   opacity: 0;
   outline: none;
   border: none;
   background: transparent;
   object-fit: contain;
-  margin-top: 90px;
+  margin-top: 97.5px;
   position: absolute;
   right: 2px;
   transform: rotate(-90deg);
@@ -385,7 +392,7 @@
 
 .nxtBtn:hover,
 .preBtn:hover {
-  background-color: rgb(43, 43, 43, 0.5);
+  /* background-color: rgb(43, 43, 43, 0.5); */
   z-index: 1000;
   opacity: 1;
 }

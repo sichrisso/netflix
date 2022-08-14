@@ -1,2 +1,2 @@
-# netflix
+# netflix clone
 HTML, CSS &amp; JS

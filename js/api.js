@@ -72,7 +72,7 @@ const appendHtml = (genreName, data) => {
   moviehtml += `<div class="ImageContainer">`;
   data.forEach((movie, i) => {
     // moviehtml += `<img class="good" src ="${IMAGE_URL}/${movie.poster_path}" onclick= "Event.stopPropagation();alert("hello");"/>`;
-    moviehtml += `<img class="good" src ="${IMAGE_URL}/${movie.poster_path}" onclick= "movieDetail('${movie.title},${movie.overview}, ${movie.poster_path}')"/>`;
+    moviehtml += `<img class="good" src ="${IMAGE_URL}/${movie.poster_path}" onclick= "movieDetail('${movie.title}', '${movie.overview}', '${movie.poster_path}')"/>`;
 
     if (i == data.length - 1) {
       setTimeout(() => {

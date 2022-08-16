@@ -30,18 +30,19 @@ window.onscroll = function () {
 
 function movieDetail(title, overview, image) {
   let DetailInfo = "";
-
+  // document.querySelector('.DetailTitle').textContent = `${overview}`;
   DetailInfo = `
   <div id="detail_img"  style="background-image: linear-gradient(
     to bottom,
-    transparent 80%,
+    transparent 0%,
     rgb(34, 34, 34) 100%
-  ),url('https://image.tmdb.org/t/p/original/${image}')"></div>
+  ),
+  url('https://image.tmdb.org/t/p/original/${image}')"></div>
   <img class="close" src="images/close.svg" alt="exit" />
   <h1 id="detail_title">${title}</h1>
   <p>${overview}</p>
   `;
-
+    
   detailInformation.innerHTML = DetailInfo;
   detail.classList.add("active");
   maindiv.classList.add("active");

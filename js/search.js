@@ -1,5 +1,5 @@
 // const getSearchTerm = () => {
-//     // const search_term = document.querySelector('.searchField').value;
+//     const search_term = document.querySelector('.searchField').value;
 //     // return search_term
 //     // console.log(search_term)
 //     SearchField.addEventListener('keypress', (event) => {
@@ -13,9 +13,9 @@
 //     }, false)
 // }
 
-export const getSearchTerm = () => {
-    const search_term = document.getElementById('.search').value;
-    return search_term
+// export const getSearchTerm = () => {
+//     const search_term = document.getElementById('.search').value;
+//     return search_term
     // console.log(search_term)
 
     // document.querySelector(".searchField").addEventListener("keypress", (event)=> {
@@ -28,7 +28,7 @@ export const getSearchTerm = () => {
     //     }
     // })
     // return search_term
-}
+// }
 // SearchField.addEventListener(
 //     "keypress",
 //     (event) => {

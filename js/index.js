@@ -11,6 +11,7 @@ const Searchbar = document.querySelector(".search");
 const Setting = document.querySelector(".setting");
 const SearchText = document.querySelector(".searchText");
 const SearchField = document.querySelector(".searchField");
+const detailBackground = document.querySelector('#detail_img')
 
 window.onscroll = function () {
   let top = window.scrollY;
@@ -26,7 +27,23 @@ window.onscroll = function () {
 //   maindiv.classList.add("active");
 // });
 
-function movieDetail() {
+function movieDetail(title, overview, poster_path) {
+  let DetailInfo = "";
+
+  // detailBackground.style.backgroundImage = `linear-gradient(
+  //   to bottom,
+  //   transparent 80%,
+  //   rgb(34, 34, 34) 100%
+  // ),url('https://image.tmdb.org/t/p/original/${movie.poster_path}')`;
+  //   DetailInfo = 
+  // `<div class="details">
+  //     <div id="detail_img"></div>
+  //       <img class="close" src="images/close.svg" alt="exit" />
+  //       <p>${movie.title}</p>
+  //       <p>${movie.overview}</p>
+  //   </div>`;
+  console.log(title);
+  // console.log(movie.overview);
   detail.classList.add("active");
   maindiv.classList.add("active");
   // console.log("clickedsss")
@@ -50,9 +67,9 @@ let index = 0;
 for (const nxtButton of nxtButtons) {
   const MovieScroll = MovieScrolls[index];
   function righty() {
-    console.log("first")
+    console.log("first");
     MovieScroll.scrollLeft += 700;
-  };
+  }
   index++;
 }
 

@@ -732,17 +732,26 @@
   padding: 10px;
   border-radius: 50%;
   border: 1px solid white;
+  align-self: center;
+  /* position: absolute; */
+  /* top: 15px; */
+  /* top: 0%; */
+  /* left: 50%; */
+  /* right: 50%; */
   position: absolute;
   display: none;
   left: 110px;
   top: 50px;
 }
-
+.searchInfo{
+  color: white;
+  font-size: 50px;
+}
 .img:hover ~ #playbtn {
   display: block;
-}
+} 
 
-#playbtn:hover {
+ #playbtn:hover {
   display: block;
 }
 

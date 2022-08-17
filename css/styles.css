@@ -7,7 +7,8 @@
   z-index: 850;
   background-color: rgb(26, 25, 25);
   background-size: cover;
-  background-position: 50% 50%;
+  /* background-position: center; */
+  background-position: 50% 100%;
   /* background-image: linear-gradient(
       to bottom,
       transparent 0%,
@@ -15,7 +16,7 @@
     ),
     url(../images/BreakingBad.webp); */
   width: 100%;
-  height: 880px;
+  height: 100vh;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -25,19 +26,19 @@
 }
 
 .navbar {
+  justify-content: space-between;
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.7) 10%,
     transparent
   );
-  gap: 500px;
   width: 100%;
   background-color: transparent;
   transition: 0.3s all;
   padding-top: 20px;
-  padding-left: 60px;
+
   padding-bottom: 20px;
-  padding-right: 60px;
+
   align-items: center;
   display: flex;
   position: fixed;
@@ -61,7 +62,7 @@
 }
 
 #profile {
-  width: 38px;
+  width: 40px;
   height: 37px;
   border-radius: 5px;
 }
@@ -78,8 +79,10 @@
 }
 
 .navigation {
+  padding-left: 60px;
   display: flex;
 }
+
 .navigation a {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
@@ -110,14 +113,11 @@
 }
 
 .setting {
+  padding-right: 60px;
   cursor: pointer;
   gap: 10px;
   align-items: center;
   display: flex;
-}
-
-.setting.active {
-  margin-left: 41px;
 }
 
 .setting p {
@@ -133,13 +133,13 @@
   background-color: rgba(11, 10, 10, 0.7);
   transition: all 0.3s ease;
   z-index: 900;
-  border: 2px solid white;
+  border: 1px solid white;
   padding-right: 265px;
   padding-left: 2px;
   padding-top: 1px;
   padding-bottom: 1px;
   position: absolute;
-  left: 960px;
+  right: 280px;
 }
 
 .searchField {
@@ -153,14 +153,22 @@
 }
 
 .searchField::placeholder {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 15px;
   color: rgba(214, 213, 213, 0.8);
+  line-height: 500px;
+}
+
+.searchField::-webkit-search-cancel-button{
+  position:relative;
+  right:10px;    
 }
 
 .searchText {
   display: flex;
   position: absolute;
-  left: 1000px;
+  right: 280px;
   opacity: 0;
 }
 
@@ -177,12 +185,13 @@
 }
 
 .row {
-  padding-left: 60px;
+  width: 100%;
   position: absolute;
   top: 190px;
 }
 
 .series {
+  padding-left: 60px;
   display: flex;
   gap: 5px;
 }
@@ -204,6 +213,7 @@
 
 #title {
   width: 600px;
+  padding-left: 60px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -224,12 +234,12 @@
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: white;
   font-size: 17px;
-  text-overflow: ellipsis;
 }
 
 .row2 {
+  justify-content: space-between;
   display: flex;
-  gap: 999px;
+  padding-left: 60px;
 }
 
 .buttons {
@@ -267,7 +277,7 @@
 #more-info {
   cursor: pointer;
   display: flex;
-  background-color: rgba(76, 72, 72, 0.6);
+  background-color: rgba(76, 72, 72);
   color: white;
   border: none;
   padding: 11px 24px 11px 24px;
@@ -392,9 +402,50 @@
 
 .nxtBtn:hover,
 .preBtn:hover {
-  /* background-color: rgb(43, 43, 43, 0.5); */
   z-index: 1000;
   opacity: 1;
+}
+
+.searchExplore {
+  padding-top: 150px;
+  height: 100vh;
+  background-color: rgb(16, 15, 15);
+}
+
+.searchExplore p {
+  color: white;
+  font-size: 30px;
+}
+
+.searchInfo {
+  padding-left: 60px;
+  display: flex;
+}
+
+#explore {
+  margin-right: 10px;
+  color: rgb(134, 130, 130);
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  align-self: center;
+}
+
+.searchGrid {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: auto auto auto auto auto;
+  padding-top: 20px;
+  align-self: center;
+  justify-content: center;
+}
+
+.searchGrid img {
+  border-radius: 3px;
+  margin-right: 5px;
+  margin-bottom: 60px;
+  width: 275px;
+  height: 170px;
 }
 
 /* Detail Page Css */
@@ -425,6 +476,7 @@
 }
 
 .body2.active {
+  /* justify-content: center; */
   display: block;
 }
 
@@ -460,7 +512,7 @@
   top: 300px;
 }
 
-.close {
+.cancel {
   cursor: pointer;
   position: absolute;
   left: 895px;
@@ -744,10 +796,7 @@
   left: 110px;
   top: 50px;
 }
-.searchInfo {
-  color: white;
-  font-size: 50px;
-}
+
 .img:hover ~ #playbtn {
   display: block;
 }

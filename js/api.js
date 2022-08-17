@@ -1,16 +1,14 @@
 import { BASE_URL, API_KEY, IMAGE_URL } from "./constants.js";
-// import { getSearchTerm } from "./search.js";
 
-const movieListView = document.querySelector(".movie_lists");
+// Background movie view API
+
 const movieInfo = document.querySelector("#title");
-let moviehtml = "";
 
 async function getNowPlayingMovie() {
   try {
     let response = await fetch(
       `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}`
     );
-    // console
     let { results } = await response.json();
     let output = [];
     let MovieInformation = "";
@@ -44,6 +42,12 @@ async function getNowPlayingMovie() {
 
 getNowPlayingMovie();
 
+
+// List of movies by thier Genre 
+
+const movieListView = document.querySelector(".movie_lists");
+let moviehtml = "";
+
 fetch(`${BASE_URL}/genre/movie/list?api_key=${API_KEY}`)
   .then((response) => response.json())
   .then((data) => {
@@ -71,7 +75,6 @@ const appendHtml = (genreName, data) => {
   moviehtml += `<img class="nxtBtn"  src="images/nxt-btn.svg"/>`;
   moviehtml += `<div class="ImageContainer">`;
   data.forEach((movie, i) => {
-    // moviehtml += `<img class="good" src ="${IMAGE_URL}/${movie.poster_path}" onclick= "Event.stopPropagation();alert("hello");"/>`;
     moviehtml += `<img class="good" src ="${IMAGE_URL}/${movie.poster_path}" onclick= "movieDetail('${movie.title}', '${movie.overview}', '${movie.poster_path}')"/>`;
 
     if (i == data.length - 1) {
@@ -82,14 +85,15 @@ const appendHtml = (genreName, data) => {
   });
   moviehtml += `</div>`;
   moviehtml += `</div>`;
-  // moviehtml += `<script src="js/index.js"></script>`
   // console.log(moviehtml)
   movieListView.innerHTML = moviehtml;
 };
 
+
+// Search Movies API
+
 const SearchField = document.querySelector(".searchField");
-// return search_term
-// console.log(search_term)
+
 SearchField.addEventListener(
   "keypress",
   async (event) => {
@@ -97,39 +101,29 @@ SearchField.addEventListener(
     var code = event.code;
     if (name === "Enter") {
       const search_term = SearchField.value;
-      // return search_term
-      console.log(search_term);
+    //   console.log(search_term);
       let response = await fetch(
         `${BASE_URL}/search/movie?api_key=${API_KEY}&language=en-US&page=1&include_adult=false&query=${search_term}`
       );
       let { results } = await response.json();
       //   console.log(results)
       let searchResults = "";
-      let searchbody = document.querySelector('.body2');
-      //   console.log(results)
-        searchResults += `<p class="searchInfo">Search Results For "${search_term}"</p>`
-        searchResults += `<div class="ImageContainer">`;
-        results.forEach((search) => {
+      let searchbody = document.querySelector('main');
+      const uppercaseWords = str => str.replace(/^(.)|\s+(.)/g, c => c.toUpperCase());
+      searchResults += `<div class="searchExplore">`;
+      searchResults += `<div class="searchInfo"><p id="explore">Explore titles related to:</p><p>${uppercaseWords(search_term)}</p></div>`;
+      searchResults +=  `<div class="searchGrid">`
+      results.forEach((search) => {
             // console.log(search)
             searchResults += `<img src ="${IMAGE_URL}/${search.poster_path}" />`;
         });
-        searchResults += `</div>`;
-
-        console.log(searchResults)
-        movieListView.innerHTML = searchResults;
+        searchResults += `</div>`
+        searchResults += ` </div>`
+        // console.log(searchResults)
+        searchbody.innerHTML = searchResults;
       // console.log(results)
     }
   },
   false
 );
 
-// async function search() {
-//     const search_term = document.getElementById(".search").value;
-
-//     console.log(
-//       `${BASE_URL}/search/movie?api_key=${API_KEY}&language=en-US&page=1&include_adult=false&query=${search_term}`
-//     );
-//     console.log(search_term);
-//   }
-
-//   search();

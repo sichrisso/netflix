@@ -5,9 +5,8 @@
 
 .body1 {
   z-index: 850;
-  background-color: rgb(26, 25, 25);
+  background-color: rgb(16, 15, 15);;
   background-size: cover;
-  /* background-position: center; */
   background-position: 50% 100%;
   /* background-image: linear-gradient(
       to bottom,
@@ -460,42 +459,37 @@
   background: rgba(90, 90, 90, 0.5);
   z-index: 9999;
 }
-.detailPage {
-  height: 100%;
-  position: fixed;
-  top: 50px;
-  left: 50px;
-  margin-left: 285px;
-  margin-right: 284px;
-  height: 100%;
-  overflow-y: scroll;
-}
-
-.detailPage::-webkit-scrollbar {
-  display: none;
-}
 
 .body2.active {
-  /* justify-content: center; */
   display: block;
 }
 
-#detail_img {
-  /* background-image: linear-gradient(
+.detailPage {
+  border-radius: 15px 15px 0px 0px;
+  position: absolute;
+  top: 40px;
+  left: 275px;
+  right: 275px;
+  height: 100%;
+  overflow-y: scroll;
+  cursor: pointer; 
+}
+
+.top_content {
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
       to bottom,
       transparent 0%,
       rgb(34, 34, 34) 100%
     ),
-    url(../images/detail.jpg); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  display: block;
-  width: 950px;
-  height: 580px;
-  margin-top: 20px;
-  border-radius: 15px 15px 0px 0px;
-  position: relative;
+    url(../images/detail.jpg); 
+}
+
+.detailPage::-webkit-scrollbar {
+  display: none;
 }
 
 #detail_title {
@@ -504,20 +498,20 @@
     "Lucida Sans", Arial, sans-serif;
   align-self: center;
   font-weight: bolder;
-  font-size: 40px;
+  font-size: 50px;
   cursor: pointer;
   color: white;
   position: absolute;
   left: 50px;
-  top: 300px;
+  top: 200px;
 }
 
 .cancel {
   cursor: pointer;
   position: absolute;
-  left: 895px;
-  top: 30px;
-  background-color: rgba(212, 211, 211, 0.2);
+  right: 25px;
+  top: 20px;
+  background-color: rgba(99, 98, 98, 0.7);
   padding: 8px;
   border-radius: 50%;
 }
@@ -530,7 +524,7 @@
   cursor: pointer;
   color: white;
   position: absolute;
-  left: 500px;
+  right: 60px;
   top: 420px;
 }
 
@@ -579,7 +573,7 @@
 }
 
 .episodes {
-  background: linear-gradient(to top, rgb(1, 1, 1), rgb(34, 34, 34) 10%);
+  background: linear-gradient(to top, rgb(1, 1, 1), rgb(34, 34, 34) 60%);  
 }
 
 .episodes hr {
@@ -636,6 +630,7 @@
 }
 
 #PG {
+  color: white;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0px 5px 0px 5px;
@@ -805,6 +800,29 @@
   display: block;
 }
 
+#playepisode {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(75, 69, 69, 0.6);
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+  align-self: center;
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  left: 155px;
+  display: none;
+}
+
+.episode:hover ~ #playepisode{
+  display: block;
+}
+#playepisode:hover {
+  display: block;
+}
+
+
 .desc {
   padding: 15px;
   display: flex;
@@ -843,13 +861,14 @@
 }
 
 .about {
+  margin-top: 50px;
   margin-bottom: 50px;
   padding-left: 60px;
   color: white;
 }
 
 .about p {
-  font-size: 20px;
+  font-size: 16px;
   display: inline;
 }
 
@@ -860,6 +879,6 @@
 
 .about p:nth-of-type(odd) {
   font-weight: bolder;
-  font-size: 18px;
-  color: rgb(99, 98, 98);
+  font-size: 17px;
+  color: rgb(120, 117, 117);
 }
